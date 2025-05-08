@@ -26,12 +26,6 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "blogs"
     },
-    "users_permissions_users": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "blogs_like"
-    },
     "comments": {
       "type": "relation",
       "relation": "oneToMany",
@@ -56,6 +50,12 @@
         "videos",
         "audios"
       ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "blogs"
     }
   }
 }
